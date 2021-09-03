@@ -93,3 +93,8 @@ Silme yapmak için :
 db.photos.deleteOne({qty: 50})
 ~~~
 Eğer birden daha fazla döküman varsa ilki silinir. Birden fazla döküman silmek için, deleteMany() kullanılır.
+
+## Mongoose
+
+`npm i mongoose`
+Mongoose için dökümantasyon : `https://mongoosejs.com/docs/guide.html`
