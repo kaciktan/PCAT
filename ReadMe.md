@@ -1,4 +1,6 @@
 # PCAT
+- How to init npm :
+- `npm init -y` | -y => Default options
 - How to install prettier:  
 `npm install prettier -D --save-exact`<br>
 .prettierc file : 
