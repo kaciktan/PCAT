@@ -59,8 +59,8 @@ const myLogger = (req, res, next) => {
 - linkler path olarak verilmeli. Örnek : `/about   /contact` app.js den requestler karşılanmalı.
 
 ## MongoDb
-`https://www.mongodb.com/try/download/community` adresinden indirilebilir.
-`C:\Program Files\MongoDB\Server\4.4\bin` mongo terminal ekranı için çevre değişkeni olarak eklenmeli.
+`https://www.mongodb.com/try/download/community` adresinden indirilebilir.<br>
+`C:\Program Files\MongoDB\Server\4.4\bin` mongo terminal ekranı için çevre değişkeni olarak eklenmeli.<br>
 - MongoDB Compass : Mongo için GUI
 
 
