@@ -1,5 +1,6 @@
 # PCAT
 * [Çalışma Ortamı](#calisma-ortami-hazirlanmasi)
+* [ExpressJS](#express-js)
 
 
 ## CALISMA ORTAMI HAZIRLANMASI
@@ -34,6 +35,18 @@
   },
 ~~~
 
-
+## Express Js
+- Statik Dosyalar  :<br>
+~~~javascript 
+app.use(express.static('public')); //public klasöründeki dosyalar static
+~~~
+- Middleware : <br>
+~~~javascript
+//Örnek Loggler Middleware
+const myLogger = (req, res, next) => {
+  console.log('Middleware Log 1');
+  next();
+}
+~~~
 
 
