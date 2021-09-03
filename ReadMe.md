@@ -2,7 +2,7 @@
 * [Çalışma Ortamı](#calisma-ortami-hazirlanmasi)
 * [ExpressJS](#express-js)
 * [Template Engine EJS ](#template-engine)
-
+* [MongoDB](#mongodb)
 
 ## CALISMA ORTAMI HAZIRLANMASI
 - NPM Yükleme:
@@ -57,4 +57,10 @@ const myLogger = (req, res, next) => {
 - partial kullanımı mevcut _partialname 
 - partial include `  <%- include('partials/_partialname') %> `
 - linkler path olarak verilmeli. Örnek : `/about   /contact` app.js den requestler karşılanmalı.
+
+## MongoDb
+`https://www.mongodb.com/try/download/community` adresinden indirilebilir.
+`C:\Program Files\MongoDB\Server\4.4\bin` mongo terminal ekranı için çevre değişkeni olarak eklenmeli.
+- MongoDB Compass : Mongo için GUI
+
 
