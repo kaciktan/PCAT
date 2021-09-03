@@ -1,4 +1,8 @@
 # PCAT
+* [Çalışma Ortamı](#calisma-ortami-hazirlanmasi)
+
+
+## CALISMA ORTAMI HAZIRLANMASI
 - NPM Yükleme:
 - `npm init -y` | -y => Default options
 - Prettier Yükleme :  
