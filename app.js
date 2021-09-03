@@ -1,9 +1,20 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
 const ejs = require('ejs');
 const path = require('path');
+
+const Photo = require('./models/Photo');
+
 const app = express();
 const port = 80;
 
+
+//Veritabanına bağlandık
+mongoose.connect('mongodb://localhost/pcat-test-db', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 
 //TEMPLATE ENGINE
@@ -11,10 +22,15 @@ app.set("view engine","ejs");
 
 //MIDDLEWARES 
 app.use(express.static('public'));
+app.use(express.urlencoded({extended:true})); // bodyparser yerine kullanılıyor -> urldeki datayı okuyor
+app.use(express.json()); //urldeki datayı json a çeviriyor
 
 //ROUTES
-app.get('/',(req,res)=>{
-  res.render('index');
+app.get('/', async(req,res)=>{
+  const photos = await Photo.find({});
+  res.render('index',{
+    photos
+  });
 });
 
 app.get('/about',(req,res)=>{
@@ -24,6 +40,11 @@ app.get('/about',(req,res)=>{
 
 app.get('/add',(req,res)=>{
   res.render('add');
+});
+
+app.post('/photos', async (req,res)=>{
+  await Photo.create(req.body);
+  res.redirect('/');
 });
 
 
