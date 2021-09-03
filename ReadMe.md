@@ -60,7 +60,7 @@ const myLogger = (req, res, next) => {
 
 ## MongoDb
 `https://www.mongodb.com/try/download/community` adresinden indirilebilir.<br>
-`C:\Program Files\MongoDB\Server\5.0\bin` mongo terminal ekranı için çevre değişkeni olarak eklenmeli.<br>
+`C:\Program Files\MongoDB\Server\5.0\bin` mongo terminal ekranı için sistem değişkeni olarak eklenmeli.<br>
 - MongoDB Compass : Mongo için GUI
 
 
