@@ -1,6 +1,7 @@
 # PCAT
 * [Çalışma Ortamı](#calisma-ortami-hazirlanmasi)
 * [ExpressJS](#express-js)
+* [Template Engine EJS ](#template-engine)
 
 
 ## CALISMA ORTAMI HAZIRLANMASI
@@ -49,4 +50,11 @@ const myLogger = (req, res, next) => {
 }
 ~~~
 
+## Template Engine 
+- Template Engine Yükleme : `npm i ejs`
+- EJS views klasörüne bakmaktadır
+- html dosya uzantılarını .ejs olarak değiştiririz.
+- partial kullanımı mevcut _partialname 
+- partial include `  <%- include('partials/_partialname') %> `
+- linkler path olarak verilmeli. Örnek : `/about   /contact` app.js den requestler karşılanmalı.
 
