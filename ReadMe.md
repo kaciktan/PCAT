@@ -2,7 +2,7 @@
 * [Çalışma Ortamı](#calisma-ortami-hazirlanmasi)
 * [ExpressJS](#express-js)
 * [Template Engine EJS ](#template-engine)
-
+* [MongoDB](#mongodb)
 
 ## CALISMA ORTAMI HAZIRLANMASI
 - NPM Yükleme:
@@ -58,3 +58,43 @@ const myLogger = (req, res, next) => {
 - partial include `  <%- include('partials/_partialname') %> `
 - linkler path olarak verilmeli. Örnek : `/about   /contact` app.js den requestler karşılanmalı.
 
+## MongoDb
+`https://www.mongodb.com/try/download/community` adresinden indirilebilir.<br>
+`C:\Program Files\MongoDB\Server\5.0\bin` mongo terminal ekranı için sistem değişkeni olarak eklenmeli.<br>
+- MongoDB Compass : Mongo için GUI<br>
+`show dbs` Veritabanlarını Listeler<br>
+`use deneme-test-db` Veritabanı Oluşturmak ve Kullanmak İçin<br>
+Photos collection ve bu collection içerisindeki ilk dökümanımızı oluşturmak için:
+~~~nosql
+db.photos.insertOne(
+  {title: "Photo 1", description: "Photo description lorem ipsum", qty:20}
+)
+~~~
+`db.photos.find()`  dökümanı görebilmek için.<br>
+`show collections` collectionları görmek için.<br>
+Birden daha fazla döküman  oluşturmak için:
+~~~nosql
+db.photos.insertMany([
+  {title: "Photo 2", description: "Photo 2 description", qty:50},
+  {title: "Photo 3", description: "Photo 3 description", qty:150}
+])
+~~~
+Belirli özelliklere sahip dökümanları sıralamak için 2 örnek:
+~~~
+db.photos.find({title: "Photo 1"})
+db.photos.find({title: "Photo 1", qty:200})
+~~~
+Güncelleme yapmak için : 
+~~~
+db.photos.updateOne( {title: "Photo 1"}, { $set: {qty:222}} )
+~~~
+Silme yapmak için :
+~~~
+db.photos.deleteOne({qty: 50})
+~~~
+Eğer birden daha fazla döküman varsa ilki silinir. Birden fazla döküman silmek için, deleteMany() kullanılır.
+
+## Mongoose
+
+`npm i mongoose`
+Mongoose için dökümantasyon : `https://mongoosejs.com/docs/guide.html`
