@@ -50,7 +50,7 @@ const myLogger = (req, res, next) => {
   next();
 }
 ~~~
--File Upload : <br>
+- File Upload : <br>
 Resim Yüklemek için `npm i express-fileupload` modülünü kullanıyoruz.<br>
 yrıca görsel göndermemiz için  encType="multipart/form-data" eklememiz gerekir. 
 
