@@ -41,6 +41,7 @@
 ~~~javascript 
 app.use(express.static('public')); //public klasöründeki dosyalar static
 ~~~
+`Detay Sayfalarında statik dosyalar yüklenmez ise başına / işareti koymalıyız. Örnek : /css/style.css`
 - Middleware : <br>
 ~~~javascript
 //Örnek Loggler Middleware
