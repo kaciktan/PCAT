@@ -108,7 +108,13 @@ Mongoose için dökümantasyon : `https://mongoosejs.com/docs/guide.html`
 ## Method Override
 Bilgileri "POST" request ile göndereceğiz ancak değişen bilgileri göndermek için  http PUT request kullanacağız.Tarayıcılar desteklemediği için PUT requesti simule edeceğiz.<br>
 `npm i method-override` <br>
-`app.use(methodOverride('_method')); // Middleware olarak kullanılır.`<br>
+~~~javascript
+// Middleware
+app.use(methodOverride('_method',{
+  methods:['POST','GET']
+}));
+~~~
+<br>
 `form method="POST" action="/photos/<%= photo._id %>?_method=PUT" -> formu düzenliyoruz`
 
 
