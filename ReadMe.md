@@ -3,6 +3,7 @@
 * [ExpressJS](#express-js)
 * [Template Engine EJS ](#template-engine)
 * [MongoDB](#mongodb)
+* [Method Override](#method-override)
 
 ## CALISMA ORTAMI HAZIRLANMASI
 - NPM Yükleme:
@@ -41,6 +42,7 @@
 ~~~javascript 
 app.use(express.static('public')); //public klasöründeki dosyalar static
 ~~~
+`Detay Sayfalarında statik dosyalar yüklenmez ise başına / işareti koymalıyız. Örnek : /css/style.css`
 - Middleware : <br>
 ~~~javascript
 //Örnek Loggler Middleware
@@ -49,6 +51,10 @@ const myLogger = (req, res, next) => {
   next();
 }
 ~~~
+- File Upload : <br>
+Resim Yüklemek için `npm i express-fileupload` modülünü kullanıyoruz.<br>
+yrıca görsel göndermemiz için  encType="multipart/form-data" eklememiz gerekir. `app.use(fileUpload()); //file upload için middleware`  <br>
+
 
 ## Template Engine 
 - Template Engine Yükleme : `npm i ejs`
@@ -98,3 +104,19 @@ Eğer birden daha fazla döküman varsa ilki silinir. Birden fazla döküman sil
 
 `npm i mongoose`
 Mongoose için dökümantasyon : `https://mongoosejs.com/docs/guide.html`
+
+## Method Override
+Bilgileri "POST" request ile göndereceğiz ancak değişen bilgileri göndermek için  http PUT request kullanacağız.Tarayıcılar desteklemediği için PUT requesti simule edeceğiz.<br>
+`npm i method-override` <br>
+~~~javascript
+// Middleware
+app.use(methodOverride('_method',{
+  methods:['POST','GET']
+}));
+~~~
+<br>
+`form method="POST" action="/photos/<%= photo._id %>?_method=PUT" -> formu düzenliyoruz`
+
+
+
+
