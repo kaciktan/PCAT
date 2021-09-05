@@ -117,6 +117,26 @@ app.use(methodOverride('_method',{
 
 ` form method="POST" action="/photos/<%= photo._id %>?_method=PUT" -> formu düzenliyoruz `
 
+## PROJEYI CANLI ORTAMA ALMA
+- Heroku sitesinden CLI indirip kuruyoruz.
+- MongoDB Atlas'a kaydolup bir Cluster oluşturuyoruz.
+- Cluster içerisinde kullanıcı adı ve şifremizi ayarlıyoruz.
+- Uygulama içerisinden bağlanmak için Connect your application seçeneğine tıklıyoruz.
+- app.js de mongodb connect alanını güncelliyoruz.
+- package.json dosyasında nodemon u node olarak değiştiriyoruz.
+- CMD de heroku login komutunu giriyoruz.
+~~~
+ > heroku login
+ > cd my-project/
+ > git init
+ > heroku git:remote -a photocat-app
+ > git add .
+ > git commit -am "make it better" // branch main olduğundan heroku master branch e baktığından ayarlama yapmak lazım
+ > git checkout master
+ > git checkout -b main
+ > git push heroku main // eğer main branch zaten seciliyse direkt olarak main branch yazılabilir.
+ // remote u değiştirdiğimiz unutulmamalı düzenleme yapılacaksa git remote edilmeli yoksa herokuya gider 😉
+~~~
 
 
 
