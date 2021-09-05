@@ -114,8 +114,8 @@ app.use(methodOverride('_method',{
   methods:['POST','GET']
 }));
 ~~~
-<br>
-`form method="POST" action="/photos/<%= photo._id %>?_method=PUT" -> formu düzenliyoruz`
+
+` form method="POST" action="/photos/<%= photo._id %>?_method=PUT" -> formu düzenliyoruz `
 
 
 
