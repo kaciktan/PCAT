@@ -137,6 +137,7 @@ app.use(methodOverride('_method',{
  > git push heroku main // eğer main branch zaten seciliyse direkt olarak main branch yazılabilir.
  // remote u değiştirdiğimiz unutulmamalı düzenleme yapılacaksa git remote edilmeli yoksa herokuya gider 😉
 ~~~
-
+- Mongo Atlas sitesinde Network Access sekmesine geliyoruz.
+- Add Ip Accesss -> Allow Access Anywhere ekliyoruz...
 
 
