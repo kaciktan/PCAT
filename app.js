@@ -12,12 +12,16 @@ const PhotoController = require('./contollers/photoControllers');
 const PageController = require('./contollers/pageController');
 
 const app = express();
-const port = 80;
+const port = process.env.port || 5000;
 
 //Veritabanına bağlandık
-mongoose.connect('mongodb://localhost/pcat-test-db', {
+mongoose.connect('mongodb+srv://kadir:Xdjf1pAXXAAZ4GU@cluster0.gh3fn.mongodb.net/pcat-db?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(()=>{
+  console.log("Database Connected !")
+}).catch((err)=>{
+  console.log("Error : "+err);
 });
 
 //TEMPLATE ENGINE
