@@ -12,10 +12,10 @@ const PhotoController = require('./contollers/photoControllers');
 const PageController = require('./contollers/pageController');
 
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;;
 
 //Veritabanına bağlandık
-mongoose.connect('mongodb+srv://kadir:Xdjf1pAXXAAZ4GU@cluster0.gh3fn.mongodb.net/pcat-db?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://kadir:<password>@cluster0.gh3fn.mongodb.net/pcat-db?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(()=>{
