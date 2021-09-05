@@ -4,7 +4,7 @@
 * [Template Engine EJS ](#template-engine)
 * [MongoDB](#mongodb)
 * [Method Override](#method-override)
-* [Heroku-MongoDb Atlat Canlı Ortam](#projeyi-canli-ortama-alma)
+* [Heroku-MongoDb Atlas Canlı Ortam](#projeyi-canli-ortama-alma)
 
 ## CALISMA ORTAMI HAZIRLANMASI
 - NPM Yükleme:
