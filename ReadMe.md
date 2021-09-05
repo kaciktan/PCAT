@@ -139,7 +139,8 @@ app.use(methodOverride('_method',{
  // remote u değiştirdiğimiz unutulmamalı düzenleme yapılacaksa git remote edilmeli yoksa herokuya gider 😉
 ~~~
 - Mongo Atlas sitesinde Network Access sekmesine geliyoruz.
-- Add Ip Accesss -> Allow Access Anywhere ekliyoruz...
-
+- Add Ip Accesss -> Allow Access Anywhere ekliyoruz...<br>
+`const port = process.env.PORT || 5000; // sistemden gelecek olan portu kullan yoksa yada 5000 portunu kullan`<br>
+<a href="https://photocatalogapp.herokuapp.com/">🔴CANLI TEST </a>
 #### Happy Conding... ❤
 
